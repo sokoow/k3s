@@ -27,8 +27,8 @@ import (
 
 const (
 	// When these values are updated, also update test/e2e/framework/util.go
-	defaultPodSandboxImageName    = "k8s.gcr.io/pause"
-	defaultPodSandboxImageVersion = "3.1"
+	defaultPodSandboxImageName    = "docker.io/sokoow/pause-armv6l"
+	defaultPodSandboxImageVersion = "latest"
 )
 
 var (
@@ -41,7 +41,7 @@ var (
 func NewContainerRuntimeOptions() *config.ContainerRuntimeOptions {
 	dockerEndpoint := ""
 	if runtime.GOOS != "windows" {
-		dockerEndpoint = "unix:///var/run/docker.sock"
+		dockerEndpoint = "unix:///var/run/balena-engine.sock"
 	}
 
 	return &config.ContainerRuntimeOptions{

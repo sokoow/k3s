@@ -174,8 +174,8 @@ func get(envInfo *cmds.Agent) (*config.Node, error) {
 	if !envInfo.Debug {
 		nodeConfig.Containerd.Log = filepath.Join(envInfo.DataDir, "containerd/containerd.log")
 	}
-	nodeConfig.Containerd.State = "/run/k3s/containerd"
-	nodeConfig.Containerd.Address = filepath.Join(nodeConfig.Containerd.State, "containerd.sock")
+	nodeConfig.Containerd.State = "/run"
+	nodeConfig.Containerd.Address = "/run/balena-engine.sock"
 	nodeConfig.ServerAddress = serverURLParsed.Host
 	nodeConfig.Certificate = nodeCert
 	if !nodeConfig.NoFlannel {

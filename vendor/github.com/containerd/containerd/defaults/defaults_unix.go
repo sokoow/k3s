@@ -21,12 +21,12 @@ package defaults
 const (
 	// DefaultRootDir is the default location used by containerd to store
 	// persistent data
-	DefaultRootDir = "/var/lib/containerd"
+	DefaultRootDir = "/var/lib/balena-engine"
 	// DefaultStateDir is the default location used by containerd to store
 	// transient data
-	DefaultStateDir = "/run/containerd"
+	DefaultStateDir = "/run"
 	// DefaultAddress is the default unix socket address
-	DefaultAddress = "/run/containerd/containerd.sock"
+	DefaultAddress = "/run/balena-engine.sock"
 	// DefaultDebugAddress is the default unix socket address for pprof data
 	DefaultDebugAddress = "/run/containerd/debug.sock"
 	// DefaultFIFODir is the default location used by client-side cio library

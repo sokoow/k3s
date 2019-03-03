@@ -40,7 +40,7 @@ import (
 	"k8s.io/klog"
 )
 
-var ArgDockerEndpoint = flag.String("docker", "unix:///var/run/docker.sock", "docker endpoint")
+var ArgDockerEndpoint = flag.String("docker", "unix:///var/run/balena-engine.sock", "docker endpoint")
 var ArgDockerTLS = flag.Bool("docker-tls", false, "use TLS to connect to docker")
 var ArgDockerCert = flag.String("docker-tls-cert", "cert.pem", "path to client certificate")
 var ArgDockerKey = flag.String("docker-tls-key", "key.pem", "path to private key")

@@ -39,7 +39,7 @@ import (
 )
 
 const (
-	defaultSandboxImage = "k8s.gcr.io/pause:3.1"
+	defaultSandboxImage = "docker.io/sokoow/pause-armv6l:latest"
 
 	// Various default sandbox resources requests/limits.
 	defaultSandboxCPUshares int64 = 2
